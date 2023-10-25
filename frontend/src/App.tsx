@@ -19,11 +19,11 @@ import verifyToken from "./utils/auth/verifyToken.jsx";
 import { useSelector } from "react-redux";
 
 const App = () => {
-  const token = Cookies.get("jwt");
+  const token: any = Cookies.get("jwt");
   verifyToken(token);
 
   // Get userId state from Redux store
-  const userId = useSelector((state) => state.userId);
+  const userId = useSelector((state: any) => state.userId);
 
   // TODO: [MERNSTACK-163] Redirect user from routes other then /, /login and /register if user is not logged in
   if (userId) {

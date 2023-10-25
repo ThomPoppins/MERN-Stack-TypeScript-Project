@@ -212,6 +212,7 @@ Welcome to my FullStack JavaScript application built with Express.js on the back
 - [x] [MERNSTACK-146] Decide if the default values should be set in the model or in the route. Hint: Consider using the `default` property in the company schema. CONCLUSION: Set default values in the model.
 - [x] [MERNSTACK-109] Populate the company document with the properties from the request body if they exist in companiesRoute.js.
 - [ ] [MERNSTACK-203] Make file upload possible as user/company profile image
+- [ ] [MERNSTACK-204] Migrate React frontend app to TypeScript
 
 ## Frontend
 

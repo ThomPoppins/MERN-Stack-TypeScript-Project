@@ -3,7 +3,7 @@ import { BACKEND_URL } from "../../../config.js";
 import store from "../../store/store.jsx";
 import { USER_ID, USER } from "../../store/actions.jsx";
 
-const verifyToken = async (token) => {
+const verifyToken = async (token: string) => {
   if (token) {
     await axios
       .get(BACKEND_URL + "/auth/verify-token?token=" + token)

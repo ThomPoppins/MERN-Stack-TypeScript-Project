@@ -54,7 +54,7 @@ const EditCompany = () => {
   const [owners, setOwners] = useState<any[]>([]);
 
   // Removed owners ids
-  const [removedOwnersIds, setRemovedOwnersIds] = useState([]);
+  const [removedOwnersIds, setRemovedOwnersIds] = useState<any[]>([]);
 
   // Set showLogoModal to true to show the modal for uploading a company logo
   const [showLogoModal, setShowLogoModal] = useState(false);
@@ -319,7 +319,7 @@ const EditCompany = () => {
       });
   };
 
-  const handleAddUserAsCompanyOwner = (userId) => {
+  const handleAddUserAsCompanyOwner = (userId: any) => {
     console.log("handleAddUserAsCompanyOwner userId: " + userId);
     axios
       .put(BACKEND_URL + "/companies/" + companyId + "/add-owner/" + userId)
@@ -333,8 +333,8 @@ const EditCompany = () => {
           response.data.owners
         );
 
-        const userIds = [];
-        response.data.owners.forEach((owner) => {
+        const userIds: string[] = [];
+        response.data.owners.forEach((owner: any) => {
           userIds.push(owner.userId);
         });
 
@@ -357,7 +357,7 @@ const EditCompany = () => {
       });
   };
 
-  const handleRemoveUserAsCompanyOwner = (e) => {
+  const handleRemoveUserAsCompanyOwner = (e: any) => {
     console.log(
       "handleRemoveUserAsCompanyOwner e.target.value: ",
       e.target.value
@@ -384,8 +384,8 @@ const EditCompany = () => {
           response.data.owners
         );
 
-        const userIds = [];
-        response.data.owners.forEach((owner) => {
+        const userIds: any[] = [];
+        response.data.owners.forEach((owner: { userId: any }) => {
           userIds.push(owner.userId);
         });
 
@@ -634,7 +634,6 @@ const EditCompany = () => {
             Company Description
           </label>
           <textarea
-            type="text"
             value={description}
             // onChange is a function that takes an event as an argument
             // and sets the name state to the value of the input

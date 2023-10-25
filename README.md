@@ -1,6 +1,6 @@
-# MERN_STACK_PROJ. :rocket:
+# # MERN Stack TypeScript Project :rocket:
 
-- [MERN\_STACK\_PROJ. :rocket:](#mern_stack_proj-rocket)
+- [# MERN Stack TypeScript Project :rocket:](#-mern-stack-typescript-project-rocket)
 - [Getting Started](#getting-started)
 - [Application Description](#application-description)
 - [TODO (and DONE):](#todo-and-done)
@@ -915,4 +915,4 @@ Overall, Postman provides a powerful and flexible toolset for testing and debugg
       └─ line 657: [x] [MERNSTACK-186] Check MongoDB discord server and Twitter for the BUG that users arent filtered using the $nin operator
 
 ```
-# MERN-Stack-TypeScript-Project
+

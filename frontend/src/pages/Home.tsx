@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-  let userId = useSelector((state) => state.userId);
-  let user = useSelector((state) => state.user);
+  let userId = useSelector((state: any) => state.userId);
+  let user = useSelector((state: any) => state.user);
 
   if (userId) {
     return (

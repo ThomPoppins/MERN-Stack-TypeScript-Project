@@ -26,7 +26,7 @@ const EditCompany = () => {
   const companyId = id;
 
   // Get the userId from the Redux store
-  const userId = useSelector((state) => state.userId);
+  const userId = useSelector((state: any) => state.userId);
 
   // Input field values for editing a company as state
   const [name, setName] = useState("");
@@ -51,7 +51,7 @@ const EditCompany = () => {
   const [kvkNumberErrorMessage, setKvkNumberErrorMessage] = useState("");
 
   // Owners state
-  const [owners, setOwners] = useState([]);
+  const [owners, setOwners] = useState<any[]>([]);
 
   // Removed owners ids
   const [removedOwnersIds, setRemovedOwnersIds] = useState([]);
@@ -126,43 +126,43 @@ const EditCompany = () => {
   };
 
   // Handle onChange events for all input fields
-  const handleNameChange = (e) => {
+  const handleNameChange = (e: any) => {
     setName(e.target.value);
     if (nameError) {
       validateCompanyName();
     }
   };
-  const handleEmailChange = (e) => {
+  const handleEmailChange = (e: any) => {
     setEmail(e.target.value);
     if (emailError) {
       validateEmail();
     }
   };
-  const handlePhoneChange = (e) => {
+  const handlePhoneChange = (e: any) => {
     setPhone(e.target.value);
     if (phoneError) {
       validatePhone();
     }
   };
-  const handleKvkNumberChange = async (e) => {
+  const handleKvkNumberChange = async (e: any) => {
     setKvkNumber(e.target.value);
     if (kvkNumberError) {
       await validateKvkNumber();
     }
   };
-  const handleSloganChange = (e) => {
+  const handleSloganChange = (e: any) => {
     setSlogan(e.target.value);
     if (sloganError) {
       validateSlogan();
     }
   };
-  const handleDescriptionChange = (e) => {
+  const handleDescriptionChange = (e: any) => {
     setDescription(e.target.value);
     if (descriptionError) {
       validateDescription();
     }
   };
-  const handleStartYearChange = (e) => {
+  const handleStartYearChange = (e: any) => {
     setStartYear(e.target.value);
     if (startYearError) {
       validateStartYear();
@@ -222,8 +222,8 @@ const EditCompany = () => {
         console.log("response.data: ", response.data);
 
         // Set owners
-        const userIds = [];
-        response.data.owners.forEach((owner) => {
+        const userIds: any[] = [];
+        response.data.owners.forEach((owner: any) => {
           userIds.push(owner.userId);
         });
         const ownerPromises = userIds.map((userId) => {

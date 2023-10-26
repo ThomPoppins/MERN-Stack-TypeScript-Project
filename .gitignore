@@ -2,7 +2,7 @@ node_modules
 
 # Config file with database credentials
 backend/config.js
-frontend/config.js
+frontend/config.tsx
 
 # Environment variables
 backend/.env

@@ -7,7 +7,6 @@ import { SnackbarProvider } from "notistack";
 import { Provider } from "react-redux";
 import store from "./store/store.jsx";
 
-// Get root element
 const rootElement = document.getElementById("root");
 
 if (rootElement) {
@@ -20,4 +19,6 @@ if (rootElement) {
       </Provider>
     </BrowserRouter>
   );
+} else {
+  console.error("Could not find root element");
 }

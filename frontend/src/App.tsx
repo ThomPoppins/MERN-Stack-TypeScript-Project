@@ -11,9 +11,9 @@ import Home from "./pages/Home";
 // import EditCompany from "./pages/companies/EditCompany";
 // import ShowCompany from "./pages/companies/ShowCompany";
 // import DeleteCompany from "./pages/companies/DeleteCompany";
-// import LoginUser from "./pages/users/LoginUser";
-// import RegisterUser from "./pages/users/RegisterUser";
-// import LogoutUser from "./pages/users/LogoutUser";
+import LoginUser from "./pages/users/LoginUser";
+import RegisterUser from "./pages/users/RegisterUser";
+import LogoutUser from "./pages/users/LogoutUser";
 import Cookies from "js-cookie";
 import verifyToken from "./utils/auth/verifyToken";
 import { useSelector } from "react-redux";
@@ -32,11 +32,11 @@ const App = () => {
         {/* / route, render homepage*/}
         <Route path="/" element={<Home />} />
         {/* /login route, render user login page */}
-        {/* <Route path="/login" element={<LoginUser />} /> */}
+        <Route path="/login" element={<LoginUser />} />
         {/* /register route, render user register page */}
-        {/* <Route path="/register" element={<RegisterUser />} /> */}
+        <Route path="/register" element={<RegisterUser />} />
         {/* /logout route, render user logout page */}
-        {/* <Route path="/logout" element={<LogoutUser />} /> */}
+        <Route path="/logout" element={<LogoutUser />} />
         {/* /companies/* routes */}
         {/* <Route path="/companies" element={<CompaniesList />} />
         <Route path="/companies/register" element={<RegisterCompany />} />
@@ -57,9 +57,9 @@ const App = () => {
         {/* / route, render homepage*/}
         <Route path="/" element={<Home />} />
         {/* /login route, render user login page */}
-        {/* <Route path="/login" element={<LoginUser />} /> */}
+        <Route path="/login" element={<LoginUser />} />
         {/* /register route, render user register page */}
-        {/* <Route path="/register" element={<RegisterUser />} /> */}
+        <Route path="/register" element={<RegisterUser />} />
       </Routes>
     );
   }

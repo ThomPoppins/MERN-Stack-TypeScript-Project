@@ -49,8 +49,6 @@ const Home = () => {
       <div>
         <Navbar />
         <div className="mx-auto p-5">
-          <h1 className="text-3xl my-8">Home</h1>
-
           <p className="">
             Register and login to your account to see the features of this
             application in action. Account data will only be saved to your own

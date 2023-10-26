@@ -89,37 +89,37 @@ const RegisterUser = () => {
   };
 
   // Handle onChange events for all input fields
-  const handleUsernameChange = (e) => {
+  const handleUsernameChange = (e: any) => {
     setUsername(e.target.value);
     if (usernameError) {
       validateUsername();
     }
   };
-  const handleEmailChange = (e) => {
+  const handleEmailChange = (e: any) => {
     setEmail(e.target.value);
     if (emailError) {
       validateEmail();
     }
   };
-  const handlePasswordChange = (e) => {
+  const handlePasswordChange = (e: any) => {
     setPassword(e.target.value);
     if (passwordError) {
       validatePassword();
     }
   };
-  const handleConfirmPasswordChange = (e) => {
+  const handleConfirmPasswordChange = (e: any) => {
     setConfirmPassword(e.target.value);
     if (confirmPasswordError) {
       validateConfirmPassword();
     }
   };
-  const handleFirstNameChange = (e) => {
+  const handleFirstNameChange = (e: any) => {
     setFirstName(e.target.value);
     if (firstNameError) {
       validateFirstName();
     }
   };
-  const handleLastNameChange = (e) => {
+  const handleLastNameChange = (e: any) => {
     setLastName(e.target.value);
     if (lastNameError) {
       validateLastName();
@@ -224,7 +224,7 @@ const RegisterUser = () => {
   return (
     <div className="p-4">
       <BackButton destination={"/"} />
-      <h1 className="text-3xl my-4">Register Account</h1>
+      <h1 className="text-3xl my-4">Register</h1>
       {loading ? <Spinner /> : ""}
       <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
         {registerErrorMessage ? (

@@ -14,13 +14,23 @@ import CompanyModal from "./CompanyModal";
 import DeleteCompanyModal from "./DeleteCompanyModal";
 import { BACKEND_URL } from "../../../config";
 
-const CompaniesSingleCard = ({ company, updateCompanies }) => {
+interface CompaniesSingleCardProps {
+  company: object;
+  updateCompanies: () => void;
+}
+
+const CompaniesSingleCard = ({
+  company,
+  updateCompanies,
+}: CompaniesSingleCardProps) => {
   const [showModal, setShowModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [owners, setOwners] = useState([]);
 
+  console.log("company: ", company);
+
   useEffect(() => {
-    const ownerPromises = company.owners.map((owner) =>
+    const ownerPromises = company.owners.map((owner: any) =>
       axios.get(BACKEND_URL + `/users/user/${owner.userId}`)
     );
 

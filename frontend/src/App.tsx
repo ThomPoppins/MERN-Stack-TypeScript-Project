@@ -6,11 +6,11 @@ import Home from "./pages/Home";
 // import EditBook from "./pages/books/EditBook";
 // import ShowBook from "./pages/books/ShowBook";
 // import DeleteBook from "./pages/books/DeleteBook";
-// import CompaniesList from "./pages/companies/CompaniesList";
-// import RegisterCompany from "./pages/companies/RegisterCompany";
-// import EditCompany from "./pages/companies/EditCompany";
-// import ShowCompany from "./pages/companies/ShowCompany";
-// import DeleteCompany from "./pages/companies/DeleteCompany";
+import CompaniesList from "./pages/companies/CompaniesList";
+import RegisterCompany from "./pages/companies/RegisterCompany";
+import EditCompany from "./pages/companies/EditCompany";
+import ShowCompany from "./pages/companies/ShowCompany";
+import DeleteCompany from "./pages/companies/DeleteCompany";
 import LoginUser from "./pages/users/LoginUser";
 import RegisterUser from "./pages/users/RegisterUser";
 import LogoutUser from "./pages/users/LogoutUser";
@@ -25,6 +25,8 @@ const App = () => {
   // Get userId state from Redux store
   const userId = useSelector((state: any) => state.userId);
 
+  console.log("userId: ", userId);
+
   // TODO: [MERNSTACK-163] Redirect user from routes other then /, /login and /register if user is not logged in
   if (userId) {
     return (
@@ -38,11 +40,11 @@ const App = () => {
         {/* /logout route, render user logout page */}
         <Route path="/logout" element={<LogoutUser />} />
         {/* /companies/* routes */}
-        {/* <Route path="/companies" element={<CompaniesList />} />
+        <Route path="/companies" element={<CompaniesList />} />
         <Route path="/companies/register" element={<RegisterCompany />} />
         <Route path="/companies/edit/:id" element={<EditCompany />} />
         <Route path="/companies/details/:id" element={<ShowCompany />} />
-        <Route path="/companies/delete/:id" element={<DeleteCompany />} /> */}
+        <Route path="/companies/delete/:id" element={<DeleteCompany />} />
         {/* /books/* routes */}
         {/* <Route path="/books" element={<BooksList />} />
         <Route path="/books/create" element={<CreateBook />} />

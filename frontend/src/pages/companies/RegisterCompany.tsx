@@ -46,7 +46,7 @@ const RegisterCompany = () => {
   const [loading, setLoading] = useState(false);
 
   // Get the userId from the Redux store
-  const userId = useSelector((state) => state.userId);
+  const userId = useSelector((state: any) => state.userId);
 
   // useNavigate is a hook that returns a navigate function that we can use to navigate to a different page
   const navigate = useNavigate();
@@ -112,43 +112,43 @@ const RegisterCompany = () => {
   };
 
   // Handle onChange events for all input fields
-  const handleNameChange = (e) => {
+  const handleNameChange = (e: any) => {
     setName(e.target.value);
     if (nameError) {
       validateCompanyName();
     }
   };
-  const handleEmailChange = (e) => {
+  const handleEmailChange = (e: any) => {
     setEmail(e.target.value);
     if (emailError) {
       validateEmail();
     }
   };
-  const handlePhoneChange = (e) => {
+  const handlePhoneChange = (e: any) => {
     setPhone(e.target.value);
     if (phoneError) {
       validatePhone();
     }
   };
-  const handleKvkNumberChange = async (e) => {
+  const handleKvkNumberChange = async (e: any) => {
     setKvkNumber(e.target.value);
     if (kvkNumberError) {
       await validateKvkNumber();
     }
   };
-  const handleSloganChange = (e) => {
+  const handleSloganChange = (e: any) => {
     setSlogan(e.target.value);
     if (sloganError) {
       validateSlogan();
     }
   };
-  const handleDescriptionChange = (e) => {
+  const handleDescriptionChange = (e: any) => {
     setDescription(e.target.value);
     if (descriptionError) {
       validateDescription();
     }
   };
-  const handleStartYearChange = (e) => {
+  const handleStartYearChange = (e: any) => {
     setStartYear(e.target.value);
     if (startYearError) {
       validateStartYear();
@@ -435,7 +435,6 @@ const RegisterCompany = () => {
             Company Description
           </label>
           <textarea
-            type="text"
             value={description}
             // onChange is a function that takes an event as an argument
             // and sets the name state to the value of the input
